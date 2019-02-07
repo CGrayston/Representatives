@@ -17,11 +17,13 @@ class RepresentativeTableViewCell: UITableViewCell {
         }
     }
     
+    // MARK: - IBOutlets
     @IBOutlet weak var partyLabel: UILabel!
     @IBOutlet weak var districtLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var phoneNumberLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
+    
     
     func updateViews() {
         
@@ -32,6 +34,7 @@ class RepresentativeTableViewCell: UITableViewCell {
         phoneNumberLabel.text = representative.phone
         websiteLabel.text = representative.link
         
+        // Change party name font color
         partyLabel.textColor = representative.party == "Republican" ? .red : .blue
         
     }

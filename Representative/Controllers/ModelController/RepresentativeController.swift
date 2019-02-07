@@ -10,8 +10,10 @@ import Foundation
 
 class RepresentativeController {
     
+    // Base URL
     static let baseURL = URL(string: "http://whoismyrepresentative.com/getall_reps_bystate.php")
     
+    // search for Represntative by State then return an array of them
     static func searchRepresentatives(forState state: String, completion: @escaping ([Representative]) -> Void) {
         
         guard let baseURL = baseURL else { completion([]); return }
